@@ -11,3 +11,4 @@ environment_variables
 htmlcov
 README.html
 .tox
+django-ebay-accounts.iml
