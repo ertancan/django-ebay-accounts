@@ -98,7 +98,7 @@ class AccountDetailView(
     View for viewing a ``Account`` object
     """
     model = Account
-    permission_required = APP_NAME + '.view_account'
+    permission_required = APP_NAME + '.view_ebay_account'
 
 
 class AccountUpdateView(
@@ -107,7 +107,7 @@ class AccountUpdateView(
     View for updating a ``Account`` object
     """
     model = Account
-    permission_required = APP_NAME + '.change_account'
+    permission_required = APP_NAME + '.view_ebay_account'
 
 
 class AccountDeleteView(
@@ -123,12 +123,12 @@ class AccountDeleteView(
 class AccountListView(
         LoginRequiredMixin, PermissionRequiredMixin, ListView):
     model = Account
-    permission_required = APP_NAME + '.view_account'
+    permission_required = APP_NAME + '.view_ebay_account'
 
 
 class PrivacyPolicyView(
         LoginRequiredMixin, PermissionRequiredMixin, TemplateView):
-    permission_required = APP_NAME + '.view_account'
+    permission_required = APP_NAME + '.view_ebay_account'
     template_name = 'ebay_accounts/privacy_policy.html'
 
 # vim: tabstop=4 expandtab shiftwidth=4 softtabstop=4 fileencoding=utf-8

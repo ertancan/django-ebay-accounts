@@ -40,7 +40,7 @@ class Account(models.Model):
 
     class Meta:
         permissions = (
-            ('view_account', 'Can view account'),
+            ('view_ebay_account', 'Can view account'),
         )
 
     def __str__(self):

@@ -65,7 +65,7 @@ class AccountListView(LoginTestMixin, TestCase):
     """
     Tests for the ``AccountListView`` view
     """
-    user_permissions = (APP_NAME + '.view_account', )
+    user_permissions = (APP_NAME + '.view_ebay_account', )
 
     def test_get_none(self):
         self.login()
@@ -160,7 +160,7 @@ class AccountRejectCreateViewTest(LoginTestMixin, TestCase):
     """
     user_permissions = (
         APP_NAME + '.add_account',
-        APP_NAME + '.view_account',
+        APP_NAME + '.view_ebay_account',
     )
 
     def test_get(self):
@@ -187,7 +187,7 @@ class AccountFinishCreateView(LoginTestMixin, TestCase):
     """
     user_permissions = (
         APP_NAME + '.add_account',
-        APP_NAME + '.view_account',
+        APP_NAME + '.view_ebay_account',
     )
 
     def test_get(self):

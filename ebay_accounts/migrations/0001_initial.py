@@ -23,7 +23,7 @@ class Migration(migrations.Migration):
                 ('active', models.BooleanField(default=True)),
             ],
             options={
-                'permissions': (('view_account', 'Can view account'),),
+                'permissions': (('view_ebay_account', 'Can view account'),),
             },
             bases=(models.Model,),
         ),
