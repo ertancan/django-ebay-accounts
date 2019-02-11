@@ -72,7 +72,9 @@ class TradingAPI(object):
         headers = self._get_headers(call)
         data = self._get_xml_request(
             call, kw_dict, include_requester_credentials)
+        print('making trading call {} \n{}\n{}'.format(self._endpoint, data, headers))
         response = requests.post(self._endpoint, data=data, headers=headers)
+        print('response: {}'.format(response))
         self._last_response = response
         return self._get_data_from_response(call, data, response)
 
