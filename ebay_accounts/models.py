@@ -77,6 +77,7 @@ class Session(models.Model):
             site_id=self.site_id)
         response = trading.execute(
             'GetSessionID', {'RuName': trading.ru_name})
+        print(response)
         self.session_id = response['SessionID']
         self.save()
         return self.session_id
