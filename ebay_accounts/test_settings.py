@@ -2,8 +2,6 @@
 """
 Test Settings
 """
-from __future__ import unicode_literals
-
 import django
 
 
@@ -16,12 +14,11 @@ INSTALLED_APPS = (
     'ebay_accounts',
 )
 
-MIDDLEWARE_CLASSES = (
+MIDDLEWARE = (
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
 )
 
