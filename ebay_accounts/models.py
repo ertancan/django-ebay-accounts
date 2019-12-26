@@ -7,6 +7,7 @@ from datetime import datetime
 from urllib.parse import urlencode
 
 import django
+from django.contrib.auth.models import User
 from django.urls import reverse
 from django.db import models
 
@@ -69,7 +70,6 @@ class Session(models.Model):
             site_id=self.site_id)
         response = trading.execute(
             'GetSessionID', {'RuName': trading.ru_name})
-        print(response)
         self.session_id = response['SessionID']
         self.save()
         return self.session_id
