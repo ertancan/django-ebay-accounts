@@ -78,7 +78,7 @@ class AccountFinishCreateView(
     def get(self, request, *args, **kwargs):
         self.object = self.get_object(uuid=request.GET['UUID'])
         account = self.object.create_account()
-        return render(request, 'ebay_account/account_create_success.html', {'object': account})
+        return render(request, 'ebay_accounts/account_create_success.html', {'object': account})
 
 
 class AccountCreateView(
