@@ -20,4 +20,8 @@ class Migration(migrations.Migration):
             name='site_id',
             field=models.IntegerField(choices=[(0, 'United States'), (2, 'Canada'), (3, 'Royaume-Uni'), (15, 'Australie'), (16, 'Autriche'), (23, 'Belgium (French)'), (71, 'France'), (77, 'Allemagne'), (100, 'eBay Motors'), (101, 'Italie'), (123, 'Belgium (Dutch)'), (146, 'Pays-Bas'), (186, 'Espagne'), (193, 'Suisse'), (196, 'Taïwan'), (201, 'Hong Kong '), (203, 'Inde'), (205, 'Irlande'), (207, 'Malaisie'), (210, 'Canada'), (211, 'Philippines'), (212, 'Pologne'), (216, 'Singapour'), (218, 'Suède'), (223, 'Chine')]),
         ),
+        migrations.AlterModelOptions(
+            name='account',
+            options={},
+        ),
     ]
